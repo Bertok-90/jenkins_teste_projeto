@@ -1,0 +1,17 @@
+pipeline {
+    agent  'bernardo-gomes-projeto-teste-jenkins-vscode-01'
+    stages { 
+        stage('Executa Testes') {
+                steps {
+                    script {
+                        catchError {
+                            
+                            sh "python main.py"
+
+                        }
+                    }
+                    echo currentBuild.result
+                }
+            }
+    }
+}
