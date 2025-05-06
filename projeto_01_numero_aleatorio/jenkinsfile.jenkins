@@ -4,13 +4,10 @@ pipeline {
         stage('Executa Testes') {
                 steps {
                     script {
-                        catchError {
                             
-                            bat "python main.py"
+                            bat "python  projeto_01_numero_aleatorio/main.py"
 
-                        }
                     }
-                    echo currentBuild.result
                 }
             }
     }
